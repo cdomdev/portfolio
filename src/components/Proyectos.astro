@@ -1,0 +1,93 @@
+<section class="lg:min-w-full m-auto mt-28 relative z-10">
+  <div class="text-center">
+    <h2 class="text-2xl md:text-3xl text-custom-color mb-2">Proyectos</h2>
+    <h3 class="text-lg md:text-2xl mb-2">
+      Transformando conceptos en soluciones tecnológicas
+    </h3>
+  </div>
+  <div class="marquee-container overflow-hidden relative">
+    <div class="marquee-content flex whitespace-nowrap">
+      <!-- Duplicate the items to make the marquee seamless -->
+      <div
+        class="marquee-item min-w-[250px] m-2 shadow-md w-96 h-auto bg-white">
+        <img
+          src="../../images/sumi.jpg"
+          alt="sumi-img"
+          class="w-full object-cover"
+        />
+        <div class="flex flex-col p-4">
+          <h4 class="text-lg text-black">Title</h4>
+          <p>Description</p>
+          <button>Ver proyecto</button>
+        </div>
+      </div>
+      <div
+        class="marquee-item min-w-[250px] m-2 shadow-md w-96 h-auto bg-white">
+        <img
+          src="../../images/sumi.jpg"
+          alt="sumi-img"
+          class="w-full object-cover"
+        />
+        <div class="flex flex-col p-4">
+          <h4 class="text-lg text-black">Title</h4>
+          <p>Description</p>
+          <button>Ver proyecto</button>
+        </div>
+      </div>
+      <div
+        class="marquee-item min-w-[250px] m-2 shadow-md w-96 h-auto bg-white">
+        <img
+          src="../../images/sumi.jpg"
+          alt="sumi-img"
+          class="w-full object-cover"
+        />
+        <div class="flex flex-col p-4">
+          <h4 class="text-lg text-black">Title</h4>
+          <p>Description</p>
+          <button>Ver proyecto</button>
+        </div>
+      </div>
+      <div
+        class="marquee-item min-w-[250px] m-2 shadow-md w-96 h-auto bg-white">
+        <img
+          src="../../images/sumi.jpg"
+          alt="sumi-img"
+          class="w-full object-cover"
+        />
+        <div class="flex flex-col p-4">
+          <h4 class="text-lg text-black">Title</h4>
+          <p>Description</p>
+          <button>Ver proyecto</button>
+        </div>
+      </div>
+      <!-- Repeat more items as needed -->
+    </div>
+  </div>
+</section>
+<div class="w-full bg-white m-auto relative z-0 mt-[-116px] h-48"></div>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-54%);
+    }
+  }
+
+  .marquee-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee-content {
+    display: flex;
+    animation: marquee 10s linear infinite;
+  }
+
+  .marquee-content .marquee-item {
+    flex: 0 0 auto;
+  }
+</style>
