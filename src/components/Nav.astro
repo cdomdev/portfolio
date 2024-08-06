@@ -28,62 +28,72 @@
       <span class="text-base md:text-2xl font-bold">CDOM</span>
     </div>
     <ul class="text-sm flex gap-3 md:gap-6 md:text-lg lg:gap-10">
-      <li><a href="#about" class="hover:underline">Servicios</a></li>
-      <li><a href="#profile" class="hover:underline">Proyectos</a></li>
-      <li><a href="#skills" class="hover:underline">Habilidades</a></li>
-      <li><a href="#about" class="hover:underline">Sobre Mí</a></li>
+      <li>
+        <a href="#about" class="hover:underline custom-link" id="custom-link"
+          >Servicios</a
+        >
+      </li>
+      <li>
+        <a href="#profile" class="hover:underline custom-link">Proyectos</a>
+      </li>
+      <li>
+        <a href="#skills" class="hover:underline custom-link">Habilidades</a>
+      </li>
+      <li><a href="#about" class="hover:underline custom-link">Sobre Mí</a></li>
     </ul>
-    <div class="box-buttons-header md:flex gap-4 md:gap-8 hidden">
-      <a
-        class="github flex items-center gap-2 text-lg"
-        href="https://github.com"
-        target="_blank">
-        <div class="rounded-full bg-white text-black gap-3 flex">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-github icon-tabler icon-tabler-brand-github-filled"
-            width="30"
-            height="30"
-            viewBox="0 -1.5 24 24"
-            stroke-width="1.5"
-            stroke="#2c3e50"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"
-              stroke-width="0"
-              fill="currentColor"></path>
-          </svg>
-        </div>
-        <p>Github</p>
-      </a>
-      <a
-        class="flex gap-2 text-lg border border-sky-50 py-1 px-3 rounded-md"
-        href="https://wa.me/573208132304"
-        target="_blank">
-        <div class="flex items-center hover:text-slate-400 delay-1000">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-brand-whatsapp mr-1"
-            width="35"
-            height="35"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#FFFFFF"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
-            <path
-              d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
-            ></path>
-            <p class="text-lg">Contact me</p>
-          </svg>
-        </div>
+    <div
+      class="box-buttons-header md:flex md:gap-8 hidden hover:text-slate-400 duration-200">
+      <a href="#" class="custom-link flex text-xl">
+        Enviame un mensaje
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-arrow-right w-7 h-7 stroke-white hover:stroke-slate-400 duration-200 hover:translate-x-3"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#2c3e50"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M5 12l14 0"></path>
+          <path d="M13 18l6 -6"></path>
+          <path d="M13 6l6 6"></path>
+        </svg>
       </a>
     </div>
   </nav>
 </header>
+
+<style>
+  .custom-link {
+    position: relative;
+  }
+
+  .custom-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #909ba7;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .custom-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .custom-link:hover .icon-tabler {
+    stroke: rgb(114, 126, 137);
+    transform: translateX(3px);
+    transition:
+      stroke 0.25s,
+      transform 0.25s;
+  }
+</style>

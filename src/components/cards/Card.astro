@@ -9,7 +9,7 @@ const { img, title, text } = Astro.props;
 ---
 
 <div
-  class="marquee-item min-w-[250px] m-2 shadow-md w-72 h-auto flex flex-col justify-between bg-white hover:shadow-xl hover:shadow-slate-100 transition duration-300 ease-in-out cursor-pointer md:w-37 lg:w-80"
+  class="marquee-item min-w-[250px] m-2 shadow-md w-72 h-auto flex flex-col justify-between bg-white hover:shadow-xl hover:shadow-slate-100 transition hover:-translate-y-2 duration-300 ease-in-out cursor-pointer md:w-37 lg:w-80"
   id="card">
   <img src={img} alt="sumi-img" class="w-full object-cover" />
   <div class="flex flex-col px-4 pt-1 pb-4 justify-start">
@@ -21,7 +21,7 @@ const { img, title, text } = Astro.props;
     </p>
   </div>
   <button
-    class="flex items-center w-11/12 mx-auto text-lg border justify-center rounded-lg mt-2 mb-2 bg-gray-900 text-white hover:shadow-md delay-75 hover:text-slate-200 hover:stroke-slate-200">
+    class="flex items-center w-11/12 mx-auto text-lg border-none justify-center rounded-lg mt-2 mb-2 bg-gray-900 text-white hover:shadow-md delay-75 hover:text-slate-200 hover:stroke-slate-200">
     Ver proyecto
     <svg
       xmlns="http://www.w3.org/2000/svg"
