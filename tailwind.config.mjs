@@ -14,7 +14,7 @@ export default {
         custom: "0 0 10px 2px rgb(44, 44, 44)",
       },
       width: {
-        "vw-custom": "80vw",
+        "vw-custom": "60vw",
       },
       maxWidth: {
         "mx-custom": "calc(100% - 2rem);",
@@ -33,8 +33,10 @@ export default {
       },
     },
     fontFamily: {
-      "sans-personality": ["Poppins"],
+      "onest-variable": ["Onest"],
     },
   },
   plugins: [],
 };
+
+

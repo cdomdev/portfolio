@@ -1,20 +1,67 @@
 ---
-import SectionProfile from "../components/SectionProfile.astro";
+import Profile from "../components/Profile.astro";
 import Layout from "../layouts/Layout.astro";
-import Servicios from "../components/Servicios.astro";
 import Proyectos from "../components/Proyectos.astro";
 import Habilidades from "../components/Habilidades.astro";
 import Sobremi from "../components/Sobremi.astro";
+import Visual from "../components/icons/Visual.astro";
 import Educacion from "../components/Educacion.astro";
+import Whatsapp from "../components/icons/Whatsapp.astro";
 ---
 
 <Layout title="Home">
-  <main class="text-white font-sans-personality">
-    <SectionProfile />
-    <Servicios />
-    <Proyectos />
-    <Habilidades />
-    <Sobremi />
-    <Educacion />
+  <main class="text-white m-auto font-sans-personality">
+    <section
+      id="section-profile"
+      class="mx-auto w-full px-7 mt-24 md:w-vw-custom flex flex-col lg:flex-row md:pt-16"
+    >
+      <Profile />
+    </section>
+    <section class="mt-28" id="proyectos">
+      <Proyectos />
+    </section>
   </main>
+  <section
+    class="w-full m-auto flex flex-col gap-10 z-10 pb-10"
+    id="habilidades"
+  >
+    <h2
+      class="text-custom-color flex m-auto font-extrabold text-2xl text-center py-4"
+    >
+      Habilidades
+      <Visual />
+    </h2>
+    <Habilidades />
+  </section>
+  <section id="sobre-mi">
+    <article
+      class="flex flex-col items-center justify-center gap-8 relative z-0"
+    >
+      <Sobremi />
+    </article>
+    <article class="mt-10 m-auto">
+      <Educacion />
+    </article>
+  </section>
+  <div
+    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4 mt-8"
+  >
+    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
+      >© 2024
+      Casi todos los derechos reservados - porfolio de guia <a href="https://github.com/midudev/porfolio.dev" class="hover:underline">midudev</a>
+    </span>
+
+    <ul
+      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
+    >
+      <li>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+        <a id="contacto" href="https://wa.me/573208132304" target="_blank" class="hover:underline flex items-center gap-1"
+          >Contáctame <Whatsapp/> </a
+        >
+      </li>
+    </ul>
+  </div>
 </Layout>

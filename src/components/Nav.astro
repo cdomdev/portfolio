@@ -1,70 +1,36 @@
 ---
+import Console from "./icons/Console.astro";
+import Right from "./icons/Right.astro";
 
 ---
 
-<header
-  class="bg-gray-900 px-3 text-white font-sans-personality w-full fixed top-0 z-50 lg:px-16">
-  <nav
-    class="container mx-auto p-1 flex justify-between items-center md:p-4 -z-50">
+<header class="bg-gray-900 px-4 md:px-20 text-white  w-full fixed top-0 z-50 lg:px-16">
+  <nav class="container mx-auto flex  justify-around items-center md:p-2 -z-50">
     <div class="flex items-center">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-8 h-8 md:w-10 md:h-10 mr-1 stroke-white"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="#2c3e50"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M8 9l3 3l-3 3"></path>
-        <path d="M13 15l3 0"></path>
-        <path
-          d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
-        ></path>
-      </svg>
-      <span class="text-sm md:text-2xl font-bold">CDOM</span>
+      <Console />
+      <span class="text-sm md:text-lg font-bold">CDOM</span>
     </div>
-    <ul class="text-xs flex gap-3 md:gap-6 md:text-lg lg:gap-10">
+    <ul class="text-sm flex gap-2 md:gap-6 lg:gap-10">
+      
       <li>
-        <a href="#about" class="hover:underline custom-link" id="custom-link"
-          >Servicios</a
-        >
+        <a href="/#proyectos" class="hover:text-slate-400 custom-link">Proyectos</a>
       </li>
       <li>
-        <a href="#profile" class="hover:underline custom-link">Proyectos</a>
+        <a href="/#habilidades" class="hover:text-slate-400 custom-link">Habilidades</a>
       </li>
       <li>
-        <a href="#skills" class="hover:underline custom-link">Habilidades</a>
+        <a href="/#sobre-mi" class="hover:text-slate-400 custom-link">Sobre Mí</a>
       </li>
-      <li><a href="#about" class="hover:underline custom-link">Sobre Mí</a></li>
     </ul>
-    <div
-      class="box-buttons-header md:flex md:gap-8 hidden hover:text-slate-400 duration-200">
-      <a href="#" class="custom-link flex text-xl">
+    <div class="box-buttons-header md:flex md:gap-8 hidden hover:text-slate-400 duration-200">
+      <a href="mailto:dominguez5493.cd@gmail.com" class="custom-link flex text-sm">
         Enviame un mensaje
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-arrow-right w-7 h-7 stroke-white hover:stroke-slate-400 duration-200 hover:translate-x-3"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#2c3e50"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M5 12l14 0"></path>
-          <path d="M13 18l6 -6"></path>
-          <path d="M13 6l6 6"></path>
-        </svg>
+        <Right class="icon-tabler w-10 h-10" />
       </a>
     </div>
   </nav>
 </header>
+
 
 <style>
   .custom-link {
@@ -95,5 +61,7 @@
     transition:
       stroke 0.25s,
       transform 0.25s;
-  }
+      }
+
 </style>
+

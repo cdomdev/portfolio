@@ -1,113 +1,83 @@
-<article class="mt-10 m-auto">
-  <div class="flex items-center justify-center">
-    <h4
-      class="text-2xl text-center text-custom-color md:text-3xl hover:text-slate-200 duration-300">
+---
+import Book from "./icons/Book.astro";
+---
+
+
+<div
+  class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+>
+  <div class="flex justify-center">
+    <h2
+      class="text-2xl text-center text-custom-color md:text-3xl hover:text-slate-200 duration-300 flex"
+    >
       Estudios
-    </h4>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="icon icon-tabler icon-tabler-book ml-2 stroke-custom-color hover:stroke-green-100 transition-all ease-out duration-300"
-      width="44"
-      height="44"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="#2c3e50"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-      <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-      <path d="M3 6l0 13"></path>
-      <path d="M12 6l0 13"></path>
-      <path d="M21 6l0 13"></path>
-    </svg>
+    </h2>
+    <Book />
   </div>
-  <div class="flex flex-col justify-center h-auto -mt-7 pt-20 gap-6">
-    <div
-      class="flex flex-col w-60 m-auto md:flex-row items-center justify-center gap-8">
+  <ol class="relative mt-16">
+    <li class="">
       <div
-        class="p-5 h-auto flex flex-col w-96 text-left border-inherit rounded-2xl shadow-2xl shadow-slate-700 hover:shadow-slate-800 transition-shadow">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-school stroke-white mx-auto my-1 drop-shadow-custom"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#2c3e50"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
-          <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
-        </svg>
-        <span class="font-extrabold text-lg my-3 text-slate-300 text-center"
-          >Educacion tecnologica</span
+        class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+      >
+        <div class="relative pb-12 md:col-span-2">
+          <div class="sticky top-0">
+            <span
+              class="text-custom-color -left-[42px] absolute rounded-full text-5xl"
+              ><font style="vertical-align: inherit;"
+                ><font style="vertical-align: inherit;">•</font></font
+              ></span
+            >
+            <h3 class="text-xl font-bold">Analisis y desarollo de software</h3>
+            <span>Servicio nacional de aprendizaje SENA</span>
+            <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+              >Actualmente...</time
+            >
+          </div>
+        </div>
+        <div
+          class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
         >
-        <p class="text-slate-300 text-sm">
-          Proceso de captura y analsis de requisitos para el desarrollo de
-          productos aplicando modelo de metodologias agiles.
-        </p>
+          En la trayectoria de esta formacion se incluyó un enfoque integral en
+          la captura y análisis de requisitos, con el objetivo de ofrecer
+          soluciones tecnológicas innovadoras, Mi enfoqué es desarrollar
+          productos que se ajusten a las necesidades del cliente, implementando
+          metodologías ágiles para asegurar la eficiencia y adaptabilidad.
+        </div>
       </div>
-      <span
-        class="w-4 h-4 rounded-full bg-custom-color p-3 shadow-2xl shadow-slate-700 hover:shadow-slate-100"
-      ></span>
-      <div class="text-sm text-slate-200">
-        <span class="m-0">Tecnologia en analisis y desarrollo de software.</span
-        >
-        <p class="m-0">
-          Servicio nacional de aprendizaje - <strong>SENA</strong>
-        </p>
-        <span>2022 - Actualmente...</span>
-      </div>
-    </div>
-    <div class="hidden md:flex items-center justify-center">
-      <hr class="border border-gray-50 w-7 transform rotate-90 -mr-16" />
-    </div>
+    </li>
     <div
-      class="flex flex-col w-60 m-auto md:w-full md:flex-row items-center justify-center gap-8">
-      <div class="text-black">
-        <ul class="list-disc pl-5 text-slate-300 mt-1 text-sm">
-          <li>OpenBootcamp <strong>2022 Enero - 2022 Marzo</strong></li>
-          <li>Corusera <strong>2022 Enero - 2022 Marzo</strong></li>
-          <li>Udemy <strong>2022 Noviembre</strong></li>
-        </ul>
+      class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+    >
+      <div class="relative pb-12 md:col-span-2">
+        <div class="sticky top-0">
+          <span
+            class="text-custom-color -left-[42px] absolute rounded-full text-5xl"
+            ><font style="vertical-align: inherit;"
+              ><font style="vertical-align: inherit;">•</font></font
+            ></span
+          >
+          <h3 class="text-xl font-bold text-white">
+            <font style="vertical-align: inherit;"
+              ><font style="vertical-align: inherit;">Cursos cortos</font></font
+            >
+          </h3>
+          <h4 class="text-sm text-gray-600 dark:text-white">
+            <ul class="list-disc pl-5 text-white mt-1 text-sm">
+              <li>Coursera</li>
+              <li>OpenBootcamp</li>
+              <li>Udemy</li>
+            </ul>
+          </h4>
+          <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+            >Septiembre 2022</time
+          >
+        </div>
       </div>
-      <span
-        class="w-4 h-4 rounded-full bg-custom-color p-3 shadow-2xl shadow-slate-700 hover:shadow-slate-100"
-      ></span>
       <div
-        class="p-5 h-auto flex flex-col w-96 text-left border-inherit rounded-2xl shadow-2xl shadow-slate-700 hover:shadow-slate-800 transition-shadow">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="stroke-white mx-auto my-1 drop-shadow-custom"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#2c3e50"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-          <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"></path>
-          <path
-            d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73"
-          ></path>
-          <path d="M6 9l12 0"></path>
-          <path d="M6 12l3 0"></path>
-          <path d="M6 15l2 0"></path>
-        </svg>
-        <span class="font-extrabold text-lg my-3 text-slate-300 text-center"
-          >Cursos cortos</span
-        >
-        <p class="text-sm text-slate-200">
-          Fundamentos de la progracion y desarollo de apliaciones web
-        </p>
+        class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+      >
+      Durante el desarrollo de estos cursos, adquirí una comprensión sólida de los fundamentos de programación y del desarrollo de aplicaciones web. Estos conocimientos me permitieron abordar proyectos con una perspectiva más técnica y orientada a soluciones.
       </div>
     </div>
-  </div>
-</article>
+  </ol>
+</div>
