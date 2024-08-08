@@ -32,11 +32,11 @@ export default {
         marquee: "marquee 15s linear infinite",
       },
     },
+
     fontFamily: {
       "onest-variable": ["Onest"],
     },
   },
+  darkMode: "class",
   plugins: [],
 };
-
-

@@ -1,0 +1,85 @@
+---
+import Console from "./icons/Console.astro";
+import Right from "./icons/Right.astro";
+import Theme from "./Theme.astro";
+---
+
+<header
+  class="bg-slate-300 text-black px-4 md:px-20 font-semibold dark:text-white w-full dark:bg-slate-900 fixed top-0 z-50 lg:px-16">
+  <nav
+    class="container mx-auto flex justify-around items-center md:p-2 -z-50 dark:text-gray-200">
+    <div class="flex items-center">
+      <a class="text-sm md:text-lg font-bold flex items-center" href="/#perfil">
+        <Console />
+        CDOM
+      </a>
+    </div>
+    <ul class="text-sm flex gap-2 md:gap-6 lg:gap-10">
+      <li>
+        <a
+          href="/#proyectos"
+          class="dark:hover:text-slate-400 hover:text-slate-600 custom-link">
+          Proyectos
+        </a>
+      </li>
+      <li>
+        <a
+          href="/#habilidades"
+          class="dark:hover:text-slate-400 hover:text-slate-600 custom-link">
+          Habilidades
+        </a>
+      </li>
+      <li>
+        <a
+          href="/#sobre-mi"
+          class="dark:hover:text-slate-400 hover:text-slate-600 custom-link">
+          Sobre Mí
+        </a>
+      </li>
+      <li>
+        <Theme />
+      </li>
+    </ul>
+    <div
+      class="box-buttons-header md:flex md:gap-8 hidden dark:hover:text-slate-400 hover:text-slate-600 duration-200">
+      <a
+        href="mailto:dominguez5493.cd@gmail.com"
+        class="custom-link flex text-sm items-center">
+        Enviame un mensaje
+        <Right class="icon-tabler w-10 h-10" />
+      </a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .custom-link {
+    position: relative;
+  }
+
+  .custom-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #909ba7;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .custom-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .custom-link:hover .icon-tabler {
+    stroke: rgb(114, 126, 137);
+    transform: translateX(3px);
+    transition:
+      stroke 0.25s,
+      transform 0.25s;
+  }
+</style>

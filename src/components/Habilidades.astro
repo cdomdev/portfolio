@@ -15,11 +15,12 @@ import Css from "./icons/Css.astro";
 import React from "./icons/React.astro";
 ---
 
-
 <div class="m-auto flex flex-col">
-  <h3 class="text-white font-semibold text-xl  text-center">Front-end</h3>
-  <hr class="m-0" />
-  <div class="flex m-auto flex-wrap gap-8 justify-center">
+  <h3 class="dark:text-white text-black font-semibold text-xl text-center">
+    Front-end
+  </h3>
+  <div
+    class="flex m-auto w-full flex-wrap gap-8 justify-center md:w-vw-custom mt-4 md:px-10">
     <Html />
     <Css />
     <Js />
@@ -30,39 +31,28 @@ import React from "./icons/React.astro";
     <Sass />
   </div>
 </div>
-<div>
-  <hr
-    class="border border-gray-300 w-80 transform rotate-90 mx-auto -mt-52 md:-mt-0 md:w-16"
-  />
-</div>
+
 <div class="m-auto flex flex-col">
-  <h3 class="text-white text-center font-semibold text-xl">Back-end</h3>
-  <hr class="m-0" />
-  <div class="flex m-auto flex-wrap gap-8 justify-center">
+  <h3 class="dark:text-white text-black text-center font-semibold text-xl">
+    Back-end
+  </h3>
+  <div
+    class="flex m-auto w-full flex-wrap gap-8 justify-center md:w-vw-custom mt-4">
     <Js />
     <Node />
     <Express />
   </div>
 </div>
-<div>
-  <hr
-    class="border border-gray-300 w-16 transform rotate-90 mx-auto md:-mt-0 md:w-16"
-  />
-</div>
+
 <div class="m-auto flex flex-col">
-  <h3 class="text-white text-center font-semibold text-xl">Otros</h3>
-  <hr class="m-0" />
-  <div class="flex m-auto flex-wrap gap-8 justify-center">
+  <h3 class="dark:text-white text-black text-center font-semibold text-xl">
+    Otros
+  </h3>
+  <div
+    class="flex m-auto w-full flex-wrap gap-8 justify-center md:w-vw-custom mt-4">
     <Mysql />
     <Postgre />
     <Git />
     <GithubSkill />
   </div>
 </div>
-
-<style>
-  .icon-tabler-brand-visual-studio {
-    width: 45px;
-    height: 45px;
-  }
-</style>

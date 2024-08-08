@@ -1,0 +1,31 @@
+---
+import Whatsapp from "./icons/Whatsapp.astro";
+---
+
+<footer>
+  <div
+    class="rounded-lg w-vw-custom max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4 mt-8">
+    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
+      >© 2024 Casi todos los derechos reservados - porfolio de referencia en <a
+        href="https://github.com/midudev/porfolio.dev"
+        class="hover:underline">midudev</a
+      >
+    </span>
+
+    <ul
+      class="flex flex-wrap items-center mt-3 text-black text-sm font-medium dark:text-white/90 sm:mt-0">
+      <li>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+        <a
+          id="contacto"
+          href="https://wa.me/573208132304"
+          target="_blank"
+          class="hover:underline flex items-center gap-1"
+          >Contáctame <Whatsapp />
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
