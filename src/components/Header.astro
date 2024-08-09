@@ -1,5 +1,6 @@
 ---
 import Console from "./icons/Console.astro";
+import Logo from "./icons/Logo.astro";
 import Right from "./icons/Right.astro";
 import Theme from "./Theme.astro";
 ---
@@ -9,12 +10,12 @@ import Theme from "./Theme.astro";
   <nav
     class="container mx-auto flex justify-around items-center md:p-2 -z-50 dark:text-gray-200">
     <div class="flex items-center">
-      <a class="text-sm md:text-lg font-bold flex items-center" href="/#perfil">
+      <a class="flex items-center" href="/#perfil">
         <Console />
-        CDOM
+        <Logo />
       </a>
     </div>
-    <ul class="text-xs md:text-smm flex gap-2 md:gap-6 lg:gap-10">
+    <ul class="text-xs md:text-sm flex gap-2 md:gap-6 lg:gap-10 items-center">
       <li>
         <a
           href="/#proyectos"

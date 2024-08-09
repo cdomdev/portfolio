@@ -7,12 +7,6 @@ export default {
         "custom-color": "#70ff00",
         "shadow-color": "#2d2d2d;",
       },
-      backgroundColor: {
-        custom: "#333333",
-      },
-      boxShadow: {
-        custom: "0 0 10px 2px rgb(44, 44, 44)",
-      },
       width: {
         "vw-custom": "60vw",
       },
@@ -21,15 +15,6 @@ export default {
       },
       dropShadow: {
         custom: "3px 0 3px #70ff00",
-      },
-      keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-20%)" },
-        },
-      },
-      animation: {
-        marquee: "marquee 15s linear infinite",
       },
     },
 
