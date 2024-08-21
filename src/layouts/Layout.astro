@@ -28,11 +28,11 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="h-screen p-0 dark:bg-[#13151a] m-0 font-onest-variable bg-white">
-    <Header />
+  <Header />
+  <body class="h-screen p-0 m-0 font-onest-variable">
     <slot />
-    <Footer />
   </body>
+  <Footer />
 </html>
 <style is:global>
   :root {

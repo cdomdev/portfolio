@@ -9,7 +9,8 @@ import Educacion from "../components/Educacion.astro";
 ---
 
 <Layout title="Porfolio de Carlos Dominguez - desarrollador web">
-  <main class="text-white m-auto font-sans-personality">
+  <main
+    class="text-white m-auto bg-white-gradient dark:bg-custom-gradient bg-no-repeat bg-cover">
     <section
       id="perfil"
       class="mx-auto w-full px-7 mt-10 md:w-vw-custom flex flex-col lg:flex-row md:pt-16">
@@ -18,24 +19,22 @@ import Educacion from "../components/Educacion.astro";
     <section class="mt-20" id="proyectos">
       <Proyectos />
     </section>
+    <section class="w-full m-auto flex flex-col gap-10 z-10" id="habilidades">
+      <h2
+        class="dark:text-custom-color text-black flex m-auto font-extrabold text-3xl text-center py-4 items-center">
+        Habilidades
+        <Visual />
+      </h2>
+      <Habilidades />
+    </section>
+    <section id="sobre-mi">
+      <article
+        class="flex flex-col items-center justify-center gap-8 relative z-0">
+        <Sobremi />
+      </article>
+      <article class="py-10">
+        <Educacion />
+      </article>
+    </section>
   </main>
-  <section
-    class="w-full m-auto flex flex-col gap-10 z-10 pb-10"
-    id="habilidades">
-    <h2
-      class="dark:text-custom-color text-black flex m-auto font-extrabold text-3xl text-center py-4 items-center">
-      Habilidades
-      <Visual />
-    </h2>
-    <Habilidades />
-  </section>
-  <section id="sobre-mi">
-    <article
-      class="flex flex-col items-center justify-center gap-8 relative z-0">
-      <Sobremi />
-    </article>
-    <article class="mt-10 m-auto">
-      <Educacion />
-    </article>
-  </section>
 </Layout>

@@ -16,6 +16,12 @@ export default {
       dropShadow: {
         custom: "3px 0 3px #70ff00",
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(15deg, rgba(19,17,47,1) 25%, rgba(9,9,13,1) 63%, rgba(12,77,64,1) 100%)",
+        "white-gradient":
+          "linear-gradient(15deg, rgba(255,255,255,1) 18%, rgba(250,250,250,1) 52%, rgba(254,254,254,1) 86%);",
+      },
     },
 
     fontFamily: {
