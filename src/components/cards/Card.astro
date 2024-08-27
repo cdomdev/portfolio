@@ -1,13 +1,17 @@
 ---
+import BtnAstro from "../buttons/BtnAstro.astro";
+import BtnReact from "../buttons/BtnReact.astro";
+import BtnTalwind from "../buttons/BtnTalwind.astro";
+
 interface Props {
-  title: string;
-  text: string;
+  titulo: string;
+  texto: string;
   img: string;
   url: string;
-  codigo: string;
+  urlCodigo: string | null;
 }
 
-const { img, title, text, url, codigo } = Astro.props;
+const { img, titulo, texto, url, urlCodigo } = Astro.props;
 ---
 
 <div class="flex flex-col gap-y-16">
@@ -27,17 +31,25 @@ const { img, title, text, url, codigo } = Astro.props;
     <div class="w-full md:w-1/2 md:max-w-lg">
       <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
         <font style="vertical-align: inherit;"
-          ><font style="vertical-align: inherit">{title}</font></font
+          ><font style="vertical-align: inherit">{titulo}</font></font
         >
       </h3>
       <div class="flex flex-wrap mt-2">
-        <slot />
+        <ul class="flex flex-row mb-2 gap-x-2">
+          <li>
+            <BtnReact />
+          </li>
+          <li>
+            <BtnAstro />
+          </li>
+          <li><BtnTalwind /></li>
+        </ul>
         <div class="mt-2 text-gray-700 dark:text-gray-400 text-wrap">
-          {text}
+          {texto}
         </div>
         <footer class="flex items-end justify-start mt-4 gap-x-4">
           <a
-            href={codigo}
+            href={urlCodigo}
             target="_blank"
             role="link"
             class="inline-flex items-center justify-center px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md dark:hover:bg-gray-800 hover:bg-slate-600 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
