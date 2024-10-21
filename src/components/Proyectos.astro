@@ -1,0 +1,36 @@
+---
+import Card from "./Card.astro";
+
+const proyectos = [
+    {
+        tittle: "Suministros - Tienda web",
+        text: "Suministros es una tienda web que incluye funcionalidades completas de un e-comerce. La plataforma brinda una experiencia de usuarios optimizada para la navegacion y compra de productos. Con la intregacion de mercadopago",
+        url: "https://suministros-app-alpha.vercel.app/",
+        urlCodigo: "https://github.com/cdomdev/suministros-app",
+        img: "/sumi.png",
+    },
+    {
+        tittle: "Panel de administracion",
+        text: "Este proyecto centraliza las funciones esenciales de administración en una única interfaz. Diseñado para optimizar la eficiencia, permite a los administradores gestionar usuarios, monitorizar actividades, y supervisar datos en tiempo real. Con un enfoque en la simplicidad y usabilidad.",
+        url: "https://dashboard-administrador.vercel.app/auth",
+        urlCodigo: "https://github.com/cdomdev/Dashboard-administrador",
+        img: "/dashboard.png",
+    },
+];
+---
+
+<div class="mx-auto flex w-full">
+    <div class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start">
+        {
+            proyectos.map((proyecto) => (
+                <Card
+                    titulo={proyecto.tittle}
+                    texto={proyecto.text}
+                    img={proyecto.img}
+                    url={proyecto.url}
+                    urlCodigo={proyecto.urlCodigo}
+                />
+            ))
+        }
+    </div>
+</div>

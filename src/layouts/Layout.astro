@@ -1,0 +1,111 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import {ViewTransitions} from 'astro:transitions'
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="dark:bg-custom-gradient bg-no-repeat bg-cover ">
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<script is:inline>
+	function lines() {
+		let sizeW = 3;
+		let e = document.createElement("div");
+		e.setAttribute("class", "circle");
+		document.body.appendChild(e);
+
+		e.style.width = sizeW + "px";
+		e.style.height = sizeW + "px";
+		e.style.backgroundColor =
+			"#" + Math.floor(Math.random() * 16777215).toString(16);
+		e.style.left = Math.random() * innerWidth + "px";
+		e.style.top = Math.random() * innerHeight + "px";
+
+		setTimeout(function () {
+			document.body.removeChild(e);
+		}, 9000);
+	}
+
+	let lastTime = 0;
+	function animate(time) {
+		if (time - lastTime > 200) {
+			lines();
+			lastTime = time;
+		}
+		requestAnimationFrame(animate);
+	}
+
+	requestAnimationFrame(animate);
+</script>
+
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Onest Variable', sans-serif  !important;
+	}
+
+	body {
+		height: 100dvh;
+	}
+
+	.circle {
+		position: absolute;
+		bottom: 0;
+		width: 1px;
+		aspect-ratio: 1/1;
+		background: #ffffff;
+		border-radius: 50%;
+		animation: animate 9s linear forwards;
+	}
+
+	@keyframes animate {
+		0% {
+			transform: translateY(0);
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			transform: translateY(-100vh);
+			opacity: 1;
+		}
+	}
+
+	.circle::before {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 25%;
+		width: 1%;
+		height: 100vh;
+		opacity: 0.5s;
+		transition: transform 0.1s;
+		background: linear-gradient(#ffffff, transparent);
+	}
+</style>

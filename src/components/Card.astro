@@ -1,0 +1,99 @@
+---
+import Buttons from './Buttons.astro';
+interface Props {
+  titulo: string;
+  texto: string;
+  img: string;
+  url: string;
+  urlCodigo: string | null;
+}
+
+const { img, titulo, texto, url, urlCodigo } = Astro.props;
+---
+
+<div class="flex flex-col gap-y-16">
+  <article
+    class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-5 md:space-y-0">
+    <div class="w-full md:w-1/2">
+      <div
+        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition border-none dark:shadow-2xl dark:border-slate-500 duration-500 ease-in-out transform shadow-sm overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-lg lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+        <img
+          alt="suministros store"
+          class="object-cover h-40 transition duration-500 sm:h-64 md:scale-110 md:group-hover:scale-105"
+          loading="lazy"
+          src={img}
+        />
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 md:max-w-lg">
+      <h3 class="text-lg md:text-xl font-bold text-gray-800 dark:text-gray-100">
+        <font style="vertical-align: inherit;"
+          ><font style="vertical-align: inherit">{titulo}</font></font
+        >
+      </h3>
+      <div class="flex flex-wrap mt-2">
+        <Buttons />
+        <div class="mt-2 text-gray-700 text-xs md:text-base dark:text-gray-400 text-wrap">
+          {texto}
+        </div>
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          <a
+            href={urlCodigo}
+            target="_blank"
+            role="link"
+            class="inline-flex items-center justify-center px-3 py-2 space-x-2 text-xs md:ext-sm text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md dark:hover:bg-gray-800 hover:bg-slate-600 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+            <svg
+              class="size-6"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+              ></path></svg
+            ><font style="vertical-align: inherit;"
+              ><font style="vertical-align: inherit;"> Código </font></font
+            ></a
+          >
+          <a
+            href={url}
+            role="link"
+            class="inline-flex items-center justify-center px-3 py-2 space-x-2 text-xs md:text-sm text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md dark:hover:bg-gray-800 hover:bg-slate-600 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-unlink size-4 stroke-white w-5 h-5"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#000000"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M17 22v-2"></path>
+              <path d="M9 15l6 -6"></path>
+              <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"
+              ></path>
+              <path
+                d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"
+              ></path>
+              <path d="M20 17h2"></path>
+              <path d="M2 7h2"></path>
+              <path d="M7 2v2"></path>
+            </svg><font style="vertical-align: inherit;"
+              ><font style="vertical-align: inherit;">Web</font></font
+            ></a
+          >
+        </footer>
+      </div>
+    </div>
+  </article><article
+    class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  </article>
+</div>

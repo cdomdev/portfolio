@@ -1,0 +1,82 @@
+---
+import Logo from "./icons/Logo.astro";
+import Themes from "./Themes.astro";
+import Mail from "./icons/Mail.astro";
+
+const navItems = [
+  {
+    title: "Proyectos",
+    label: "Proyectos",
+    url: "/proyectos",
+  },
+  {
+    title: "Habilidades",
+    label: "Habilidades",
+    url: "/habilidades",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/sobremi",
+  },
+];
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex px-5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center dark:bg-gray-800 bg-white"
+  >
+    <div class="flex items-center">
+      <a class="flex items-center" href="/">
+        <Logo />
+      </a>
+    </div>
+    {
+      navItems.map((link) => (
+        <a
+          class="relative block custom-link px-2 py-1 transition hover:text-blue-500 dark:hover:text-blue-500"
+          aria-label={link.label}
+          href={link.url}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+    <Mail />
+    <Themes />
+  </nav>
+</header>
+
+<style>
+  .custom-link {
+    position: relative;
+  }
+
+  .custom-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #909ba7;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .custom-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .custom-link:hover .icon-tabler {
+    stroke: rgb(114, 126, 137);
+    transform: translateX(3px);
+    transition:
+      stroke 0.25s,
+      transform 0.25s;
+  }
+</style>
