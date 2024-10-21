@@ -23,30 +23,28 @@ const proyectos = [
 
 <Layout title="Proyectos">
     <main>
-        <section id="#proyectos" class="pt-20 max-w-2xl mx-auto px-2 min-h-dvh">
+        <section
+            id="#proyectos"
+            class="mt-20 w-full md:max-w-2xl md:mx-auto px-6 min-h-dvh">
             <h1
-                class="text-xl md:text-2xl text-black font-bold dark:text-custom-color mb-4 flex items-center"
-            >
+                class="text-xl md:text-2xl mb-3 text-black font-bold dark:text-custom-color flex items-center">
                 <Code />
                 Proyectos
             </h1>
 
-            <div class="mx-auto flex w-full">
-                <div
-                    class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start"
-                >
-                    {
-                        proyectos.map((proyecto) => (
-                            <Card
-                                titulo={proyecto.tittle}
-                                texto={proyecto.text}
-                                img={proyecto.img}
-                                url={proyecto.url}
-                                urlCodigo={proyecto.urlCodigo}
-                            />
-                        ))
-                    }
-                </div>
+            <div
+                class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start">
+                {
+                    proyectos.map((proyecto) => (
+                        <Card
+                            titulo={proyecto.tittle}
+                            texto={proyecto.text}
+                            img={proyecto.img}
+                            url={proyecto.url}
+                            urlCodigo={proyecto.urlCodigo}
+                        />
+                    ))
+                }
             </div>
         </section>
     </main>

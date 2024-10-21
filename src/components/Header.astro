@@ -1,7 +1,7 @@
 ---
 import Logo from "./icons/Logo.astro";
-import Themes from "./Themes.astro";
-import Mail from "./icons/Mail.astro";
+
+import Themes from "./Themes";
 
 const navItems = [
   {
@@ -23,11 +23,9 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
->
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
   <nav
-    class="flex px-5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center dark:bg-gray-800 bg-white"
-  >
+    class="flex px-3 md:px-5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center dark:bg-gray-800 bg-[#cadad6]">
     <div class="flex items-center">
       <a class="flex items-center" href="/">
         <Logo />
@@ -38,14 +36,12 @@ const navItems = [
         <a
           class="relative block custom-link px-2 py-1 transition hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={link.label}
-          href={link.url}
-        >
+          href={link.url}>
           {link.title}
         </a>
       ))
     }
-    <Mail />
-    <Themes />
+    <Themes client:visible />
   </nav>
 </header>
 
