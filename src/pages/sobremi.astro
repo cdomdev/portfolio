@@ -4,8 +4,52 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="Sobre mi">
     <main>
-        <section id="#profile" class="pt-36 max-w-2xl mx-auto px-6">
-            <h1  class="text-white">Sobre mi</h1>
+        <section id="#profile" class="pt-36 max-w-2xl mx-auto px-6 min-h-dvh">
+            <img
+                width="200"
+                height="200"
+                src="/img2.jpg"
+                alt="img-prilfe"
+                class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+                style="object-position: 50% 50%"
+            />
+            <h1
+                class="dark:text-white text-black text-2xl md:text-3xl pt-10 font-extrabold flex items-center transform rotate-6"
+            >
+                Sobre mi
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-user w-8 h-8 ml-2 dark:stroke-white"
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#2c3e50"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                </svg>
+            </h1>
+            <div>
+                <p
+                    class="text-base ld:text-lg dark:text-white text-black md:mt-2"
+                >
+                    En este espacio te cuento un poco sobre mi persona. Me llamo
+                    Carlos Dominguez. soy un apacionado desarrollador de
+                    software que cada dia busca mejorar en la creacion de
+                    soluciones tecnologicas e innovadoras que transformen
+                    conceptos en productos funcionales.
+                </p>
+                <p class="text-base ld:text-lg dark:text-white text-black">
+                    Actualmente estoy en la fase final de mis estudios
+                    tecnologicos y algunos de mis proyectos incluyen soluciones
+                    que se pueden adaptar a tus necesidades.
+                </p>
+            </div>
         </section>
-	</main>
+    </main>
 </Layout>
