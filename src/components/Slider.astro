@@ -1,0 +1,101 @@
+---
+import SkillCard from "@/components/SkillCard.astro";
+import Html from "@/components/icons/Html.astro";
+
+const skilss = [
+    {
+        text: "Html",
+        icon: Html,
+    },
+    {
+        text: "Css",
+        icon: Html,
+    },
+    {
+        text: "JavaScript",
+        icon: Html,
+    },
+    {
+        text: "ReactJs",
+        icon: Html,
+    },
+    {
+        text: "Astro",
+        icon: Html,
+    },
+    {
+        text: "TailwindCss",
+        icon: Html,
+    },
+    {
+        text: "Sass",
+        icon: Html,
+    },
+    {
+        text: "Node",
+        icon: Html,
+    },
+    {
+        text: "Express",
+        icon: Html,
+    },
+    {
+        text: "MySql",
+        icon: Html,
+    },
+    {
+        text: "Git",
+        icon: Html,
+    },
+    {
+        text: "Github",
+        icon: Html,
+    },
+];
+---
+
+<div class="slider">
+    <div class="slide-track">
+        {
+            skilss.map((skill) => (
+                <SkillCard text={skill.text}>{skill.icon}</SkillCard>
+            ))
+        }
+    </div>
+</div>
+
+<style>
+    .slider {
+        width: 100%;
+        margin: auto;
+        height: auto;
+        overflow: hidden;
+    }
+    .slider .slide-track {
+        background-color: red;
+        gap: 10px;
+        padding: 10px 0px;
+        display: flex;
+        animation: scroll 100s linear infinite;
+        -webkit-animation: scroll 100s linear infinite;
+        width: calc(200px * 16);
+    }
+
+    .slider .slide {
+        width: 200px;
+    }
+    .slider .slide svg {
+        width: 100%;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            -webkit-animation: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+            -webkit-animation: translateX(-100%);
+        }
+    }
+</style>
