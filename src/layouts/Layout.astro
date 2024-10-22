@@ -1,5 +1,4 @@
 ---
-import BgBurbles from "@/components/BgBurbles.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
@@ -22,7 +21,7 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body
-		class="bg-white-gradient dark:bg-custom-gradient bg-no-repeat bg-cover">	
+		class="bg-white-gradient dark:bg-custom-gradient bg-no-repeat bg-cover">
 		<Header />
 		<slot />
 		<Footer />
@@ -44,9 +43,16 @@ const { title } = Astro.props;
 		e.style.top = Math.random() * innerHeight + "px";
 
 		setTimeout(function () {
-			document.body.removeChild(e);
+			if (document.body.contains(e)) {
+				document.body.removeChild(e);
+			}
 		}, 9000);
 	}
+	// Remover todas las instancias de '.circle' antes de salir de la página
+	window.addEventListener("beforeunload", () => {
+		const circles = document.querySelectorAll(".circle");
+		circles.forEach((circle) => circle.remove());
+	});
 
 	let lastTime = 0;
 	function animate(time) {
@@ -72,7 +78,6 @@ const { title } = Astro.props;
 	}
 
 	body {
-		height: 100dvh;
 		overflow-x: hidden;
 	}
 
