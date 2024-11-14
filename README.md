@@ -2,7 +2,7 @@
 
 <a href="https://portfolio-lyart-five-22.vercel.app/">
 
-![alt text](public/panelCdom.png)
+![alt text](public/folio.png)
 
 </a>
 
