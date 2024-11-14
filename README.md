@@ -11,7 +11,7 @@ funtion saludar(texto){
     console.log(texto)
 }
 
-saludar('Hola coders, mi nombre es Carlos Dominguez, Analista de software y desarrollador web')
+saludar('Hola coders, mi nombre es Carlos Dominguez, Analista y desarrollador web')
 
 ```
 
