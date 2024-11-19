@@ -5,7 +5,7 @@ import CodeIcon from "@/components/icons/Code.astro";
 import Person from "@/components/icons/Person.astro";
 ---
 
-<Layout title="Portfolio de Carlos Dominguez - desarrollador web">
+<Layout title="Carlos Dominguez - desarrollador web">
   <main>
     <section
       id="#profile"
@@ -14,21 +14,18 @@ import Person from "@/components/icons/Person.astro";
         class="text-2xl pt-20 md:pt-36 my-2 text-black font-extrabold dark:text-white">
         Hola, soy
       </h1>
-      <div class="flex flex-col gap-0 items-start">
-        <div class="flex items-center">
+      <div class="flex flex-col items-start">
+        <div class="flex flex-col">
           <span
-            class="text-4xl m-0 text-custom-color typewriter font-bold lg:text-5xl">
+            class="text-4xl m-0 text-custom-color font-extrabold typewriter lg:text-5xl">
             Carlos
           </span>
-        </div>
-        <div class="flex items-center gap-0">
           <span
             class="text-4xl m-0 text-custom-color font-extrabold typewriter lg:text-5x">
             Dominguez
           </span>
         </div>
       </div>
-
       <div class="flex items-start gap-8 my-10">
         <div
           class="image-content flex justify-start items-center size-40 md:size-56 rounded-full overflow-hidden bg-slate-400 shadow-2xl shadow-slate-400 dark:bg-[#333333] dark:shadow-slate-700">
@@ -120,7 +117,18 @@ import Person from "@/components/icons/Person.astro";
           margin: 0 auto;
           letter-spacing: 0.15em;
           animation:
-            typing 3s steps(30, end) forwards,
+            typing 3s steps(40, end) forwards,
+            blink-caret 0.75s step-end infinite;
+        }
+        .typewriter2 {
+          display: inline-block;
+          overflow: hidden;
+          padding: 0px 0px 5px 0px;
+          white-space: nowrap;
+          margin: 0 auto;
+          letter-spacing: 0.15em;
+          animation:
+            typing 3s steps(40, end) forwards,
             blink-caret 0.75s step-end infinite;
         }
 

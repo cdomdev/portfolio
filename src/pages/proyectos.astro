@@ -2,62 +2,61 @@
 import Layout from "@/layouts/Layout.astro";
 import Card from "@/components/Card.astro";
 const proyectos = [
-    {
-        tittle: "Suministros - Tienda web",
-        text: "Suministros es una tienda web que incluye funcionalidades completas de un e-comerce. La plataforma brinda una experiencia de usuarios optimizada para la navegacion y compra de productos. cuanta con la integracion de la platarfomra mercadopago para el manejo de pagos.",
-        url: "https://suministros-app-alpha.vercel.app/",
-        urlCodigo: "https://github.com/cdomdev/suministros-app",
-        img: "/sumi.png",
-    },
-    {
-        tittle: "Panel de administracion",
-        text: "Este proyecto centraliza las funciones esenciales de administración en una única interfaz. Diseñado para optimizar la eficiencia, permite a los administradores gestionar usuarios, monitorizar actividades, y supervisar datos en tiempo real. Con un enfoque en la simplicidad y usabilidad.",
-        url: "https://dashboard-administrador.vercel.app/auth",
-        urlCodigo: "https://github.com/cdomdev/Dashboard-administrador",
-        img: "/dashboard.png",
-    },
+  {
+    tittle: "Suministros - Tienda web",
+    text: "Suministros es una tienda web que incluye funcionalidades completas de un e-comerce. La plataforma brinda una experiencia de usuarios optimizada para la navegacion y compra de productos. cuanta con la integracion de la platarfomra mercadopago para el manejo de pagos.",
+    url: "https://suministros-app-alpha.vercel.app/",
+    urlCodigo: "https://github.com/cdomdev/suministros-app",
+    img: "/sumi.png",
+  },
+  {
+    tittle: "Panel de administracion - Suministros",
+    text: "Este proyecto centraliza las funciones esenciales de administración en una única interfaz. Diseñado para optimizar la eficiencia, permite a los administradores gestionar usuarios, monitorizar actividades, y supervisar datos en tiempo real. Con un enfoque en la simplicidad y usabilidad.",
+    url: "https://dashboard-administrador.vercel.app/auth",
+    urlCodigo: "https://github.com/cdomdev/Dashboard-administrador",
+    img: "/dashboard.png",
+  },
 ];
 ---
 
 <Layout title="Proyectos">
-    <main>
-        <section
-            id="#proyectos"
-            class="mt-20 w-full md:max-w-2xl md:mx-auto px-6 min-h-dvh">
-            <h1
-                class="text-2xl gap-1 items-center text-center text-black font-semibold dark:text-custom-color md:text-3xl hover:text-slate-200 duration-300 flex mb-4">
-                Proyectos
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-code size-7"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                    ></path><path d="M7 8l-4 4l4 4"></path><path
-                        d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"
-                    ></path></svg
-                >
-            </h1>
-            <div
-                class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start">
-                {
-                    proyectos.map((proyecto) => (
-                        <Card
-                            titulo={proyecto.tittle}
-                            texto={proyecto.text}
-                            img={proyecto.img}
-                            url={proyecto.url}
-                            urlCodigo={proyecto.urlCodigo}
-                        />
-                    ))
-                }
-            </div>
-        </section>
-    </main>
+  <main>
+    <section
+      id="#proyectos"
+      class="mt-20 w-full md:max-w-2xl md:mx-auto px-6 min-h-dvh">
+      <h1
+        class="text-2xl gap-1 items-center text-center text-black font-semibold dark:text-custom-color md:text-3xl hover:text-slate-200 duration-300 flex mb-4">
+        Proyectos
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-code size-7"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
+            d="M14 4l-4 16"></path></svg
+        >
+      </h1>
+      <div
+        class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start">
+        {
+          proyectos.map((proyecto) => (
+            <Card
+              titulo={proyecto.tittle}
+              texto={proyecto.text}
+              img={proyecto.img}
+              url={proyecto.url}
+              urlCodigo={proyecto.urlCodigo}
+            />
+          ))
+        }
+      </div>
+    </section>
+  </main>
 </Layout>
