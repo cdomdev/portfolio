@@ -1,0 +1,70 @@
+---
+import Card from "../Card.astro";
+import { proyectos } from "@/content/content";
+
+const proyectosSeccion = proyectos.slice(0, 2);
+---
+
+<section  class="pt-16">
+  <h2
+    class="text-2xl gap-1 items-center text-center text-black font-semibold dark:text-white md:text-3xl hover:text-slate-200 duration-300 flex mb-1"
+  >
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-code size-7"
+  ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+    d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
+    d="M14 4l-4 16"></path></svg
+>
+    Proyectos
+   
+  </h2>
+  <div class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start">
+    {
+      proyectosSeccion.map((proyecto) => (
+        <Card
+          titulo={proyecto.tittle}
+          texto={proyecto.text}
+          img={proyecto.img}
+          url={proyecto.url}
+          urlCodigo={proyecto.urlCodigo}
+        />
+      ))
+    }
+    <a
+      href="/proyectos"
+      class="self-end hover:scale-105 duration-200 text-lg flex items-center mb-10"
+    >
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        width="24"
+        height="24"
+        class="size-5"
+        stroke-width="2"
+        >
+        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+        <path
+          d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+        ></path>
+        <path d="M9 14v.01"></path>
+        <path d="M12 14v.01"></path>
+        <path d="M15 14v.01"></path>
+      </svg>
+      Mas proyectos
+      </a
+    >
+  </div>
+</section>
