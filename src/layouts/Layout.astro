@@ -3,117 +3,147 @@ import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body
-		class="bg-white-gradient dark:bg-custom-gradient bg-no-repeat bg-cover">
-		<Header />
-		<slot />
-		<Footer />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="bg-white-gradient dark:bg-custom-gradient">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
-<script is:inline>
-	function lines() {
-		let sizeW = 3;
-		let e = document.createElement("div");
-		e.setAttribute("class", "circle");
-		document.body.appendChild(e);
-
-		e.style.width = sizeW + "px";
-		e.style.height = sizeW + "px";
-		e.style.backgroundColor =
-			"#" + Math.floor(Math.random() * 16777215).toString(16);
-		e.style.left = Math.random() * innerWidth + "px";
-		e.style.top = Math.random() * innerHeight + "px";
-
-		setTimeout(function () {
-			if (document.body.contains(e)) {
-				document.body.removeChild(e);
-			}
-		}, 9000);
-	}
-	// Remover todas las instancias de '.circle' antes de salir de la página
-	window.addEventListener("beforeunload", () => {
-		const circles = document.querySelectorAll(".circle");
-		circles.forEach((circle) => circle.remove());
-	});
-
-	let lastTime = 0;
-	function animate(time) {
-		if (time - lastTime > 200) {
-			lines();
-			lastTime = time;
-		}
-		requestAnimationFrame(animate);
-	}
-
-	requestAnimationFrame(animate);
-</script>
-
 <style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: "Onest Variable", sans-serif !important;
-	}
+  :root {
+    color-scheme: light dark;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "JetBrains Mono Variable", monospace;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+  }
 
-	body {
-		overflow-x: hidden;
-	}
+  .circle {
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    aspect-ratio: 1/1;
+    background: #ffffff;
+    border-radius: 50%;
+    animation: animate 9s linear forwards;
+  }
 
-	.circle {
-		position: absolute;
-		bottom: 0;
-		width: 1px;
-		aspect-ratio: 1/1;
-		background: #ffffff;
-		border-radius: 50%;
-		animation: animate 9s linear forwards;
-	}
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh);
+      opacity: 1;
+    }
+  }
 
-	@keyframes animate {
-		0% {
-			transform: translateY(0);
-			opacity: 0;
-		}
-		50% {
-			opacity: 1;
-		}
-		100% {
-			transform: translateY(-100vh);
-			opacity: 1;
-		}
-	}
+  .circle::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 25%;
+    width: 1%;
+    height: auto;
+    opacity: 0.5s;
+    transition: transform 0.1s;
+    background: linear-gradient(#ffffff, transparent);
+  }
 
-	.circle::before {
-		content: "";
-		position: absolute;
-		bottom: 100%;
-		left: 25%;
-		width: 1%;
-		height: 100vh;
-		opacity: 0.5s;
-		transition: transform 0.1s;
-		background: linear-gradient(#ffffff, transparent);
-	}
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  #header-nav {
+    animation: blur linear both 0.5s;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
 </style>
+
+<script is:inline>
+  function applyTheme() {
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.classList.toggle("light", !isDark);
+  }
+
+  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+  applyTheme();
+  matchMedia.addEventListener("change", applyTheme());
+
+  window.addEventListener("beforeunload", applyTheme());
+
+  function lines() {
+    let sizeW = 3;
+    let e = document.createElement("div");
+    e.setAttribute("class", "circle");
+    document.body.appendChild(e);
+
+    e.style.width = sizeW + "px";
+    e.style.height = sizeW + "px";
+    e.style.backgroundColor =
+      "#" + Math.floor(Math.random() * 16777215).toString(16);
+    e.style.left = Math.random() * innerWidth + "px";
+    e.style.top = Math.random() * innerHeight + "px";
+
+    setTimeout(function () {
+      if (document.body.contains(e)) {
+        document.body.removeChild(e);
+      }
+    }, 9000);
+  }
+
+  // Remover todas las instancias de '.circle' antes de salir de la página
+  window.addEventListener("beforeunload", () => {
+    const circles = document.querySelectorAll(".circle");
+    circles.forEach((circle) => circle.remove());
+  });
+
+  let lastTime = 0;
+  function animate(time) {
+    if (time - lastTime > 200) {
+      lines();
+      lastTime = time;
+    }
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+</script>

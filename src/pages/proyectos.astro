@@ -1,31 +1,18 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Card from "@/components/Card.astro";
-const proyectos = [
-  {
-    tittle: "Suministros - Tienda web",
-    text: "Suministros es una tienda web que incluye funcionalidades completas de un e-comerce. La plataforma brinda una experiencia de usuarios optimizada para la navegacion y compra de productos. cuanta con la integracion de la platarfomra mercadopago para el manejo de pagos.",
-    url: "https://suministros-app-alpha.vercel.app/",
-    urlCodigo: "https://github.com/cdomdev/suministros-app",
-    img: "/sumi.png",
-  },
-  {
-    tittle: "Panel de administracion - Suministros",
-    text: "Este proyecto centraliza las funciones esenciales de administración en una única interfaz. Diseñado para optimizar la eficiencia, permite a los administradores gestionar usuarios, monitorizar actividades, y supervisar datos en tiempo real. Con un enfoque en la simplicidad y usabilidad.",
-    url: "https://dashboard-administrador.vercel.app/auth",
-    urlCodigo: "https://github.com/cdomdev/Dashboard-administrador",
-    img: "/dashboard.png",
-  },
-];
+import { proyectos } from "@/content/content";
 ---
 
 <Layout title="Proyectos">
   <main>
     <section
       id="#proyectos"
-      class="mt-20 w-full md:max-w-2xl md:mx-auto px-6 min-h-dvh">
+      class="mt-20 w-full md:max-w-2xl md:mx-auto px-6 min-h-dvh"
+    >
       <h1
-        class="text-2xl gap-1 items-center text-center text-black font-semibold dark:text-custom-color md:text-3xl hover:text-slate-200 duration-300 flex mb-4">
+        class="text-2xl gap-1 items-center text-center text-black font-semibold dark:text-custom-color md:text-3xl hover:text-slate-200 duration-300 flex mb-4"
+      >
         Proyectos
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +31,8 @@ const proyectos = [
         >
       </h1>
       <div
-        class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start">
+        class="flex flex-col whitespace-nowrap m-auto flex-wrap justify-start"
+      >
         {
           proyectos.map((proyecto) => (
             <Card
