@@ -5,27 +5,33 @@ import Mail from "./icons/Mail.astro";
 
 <footer class="bg-white dark:bg-[#10102c]">
   <div
-    class="rounded-lg md:flex md:items-center md:justify-between py-4 max-w-2xl mx-auto px-6">
+    class="rounded-lg md:flex md:items-center md:justify-between py-4 max-w-2xl mx-auto px-6"
+  >
     <span
       class="text-sm sm:text-center text-balance text-zinc-800/90 dark:text-zinc-200/90"
-      >© 2024 Carlos Dominguez - casi todos los derechos reservados
+      >© 2024 Carlos Dominguez
     </span>
 
     <div
-      class="flex-wrap hidden md:flex items-center mt-3 text-black text-sm font-medium dark:text-white/90 sm:mt-0">
+      class="flex-wrap hidden md:flex items-center mt-3 text-black text-sm font-medium dark:text-white/90 sm:mt-0"
+    >
       <a
-        id="contacto"
         href="mailto:dominguez5493.cd@gmail.com"
         target="_blank"
+        aria-label="Send an email"
         class="hover:underline flex items-center gap-1 hover:text-slate-500 cursor-pointer"
-        ><Mail />
+      >
+        <span class="sr-only">Mail</span>
+        <Mail />
       </a>
       <a
-        id="contacto"
         href="https://github.com/cdomdev"
         target="_blank"
+        aria-label="Visit my GitHub profile"
         class="hover:underline flex items-center gap-1 hover:text-slate-500 cursor-pointer"
-        ><Github />
+      >
+        <span class="sr-only">Github</span>
+        <Github />
       </a>
     </div>
   </div>
