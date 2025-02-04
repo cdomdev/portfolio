@@ -4,7 +4,7 @@ export const proyectos = [
     text: "Santas totas una tienda en línea diseñada para ofrecer productos personalizados. Este proyecto combina un diseño intuitivo y atractivo con tecnologías modernas para garantizar una experiencia de usuario rápida y fluida. Interfaz limpia y adaptativa que destaca la belleza de cada creación repostera, optimizada para dispositivos móviles y de escritorio",
     url: "https://santas-tortas.vercel.app/",
     urlCodigo: "https://github.com/cdomdev/santas-tortas",
-    img: "/sta-tortas.png",
+    img: "/projects/santas-tortas.png",
   },
   {
     tittle: "Panel de administracion - Suministros",
