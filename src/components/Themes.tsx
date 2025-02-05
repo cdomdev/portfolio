@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { Moon } from "./icons/Moon";
-import { Sun } from "./icons/Sun";
 
 export const LogoTheme = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
