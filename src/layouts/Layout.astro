@@ -20,7 +20,9 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="bg-white-gradient dark:bg-custom-gradient">
+  <body
+    class="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-[#000000] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] dark:bg-[size:20px_20px]"
+  >
     <Header />
     <slot />
     <Footer />
@@ -31,7 +33,7 @@ const { title } = Astro.props;
   :root {
     color-scheme: light dark;
   }
-  html{
+  html {
     scroll-behavior: smooth;
   }
   * {
@@ -39,49 +41,12 @@ const { title } = Astro.props;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
-    background-repeat: no-repeat;
     background-size: cover;
     font-family: "JetBrains Mono Variable", monospace;
     overflow-x: hidden;
     overscroll-behavior: none;
-  }
-
-  .circle {
-    position: absolute;
-    bottom: 0;
-    width: 1px;
-    aspect-ratio: 1/1;
-    background: #ffffff;
-    border-radius: 50%;
-    animation: animate 9s linear forwards;
-  }
-
-  @keyframes animate {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100vh);
-      opacity: 1;
-    }
-  }
-
-  .circle::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 25%;
-    width: 1%;
-    height: auto;
-    opacity: 0.5s;
-    transition: transform 0.1s;
-    background: linear-gradient(#ffffff, transparent);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -97,53 +62,9 @@ const { title } = Astro.props;
   }
 </style>
 
-<script is:inline>
-  function applyTheme() {
-    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.classList.toggle("dark", isDark);
-    document.documentElement.classList.toggle("light", !isDark);
-  }
 
-  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
-  applyTheme();
-  matchMedia.addEventListener("change", applyTheme());
-
-  window.addEventListener("beforeunload", applyTheme());
-
-  function lines() {
-    let sizeW = 3;
-    let e = document.createElement("div");
-    e.setAttribute("class", "circle");
-    document.body.appendChild(e);
-
-    e.style.width = sizeW + "px";
-    e.style.height = sizeW + "px";
-    e.style.backgroundColor =
-      "#" + Math.floor(Math.random() * 16777215).toString(16);
-    e.style.left = Math.random() * innerWidth + "px";
-    e.style.top = Math.random() * innerHeight + "px";
-
-    setTimeout(function () {
-      if (document.body.contains(e)) {
-        document.body.removeChild(e);
-      }
-    }, 9000);
-  }
-
-  // Remover todas las instancias de '.circle' antes de salir de la página
-  window.addEventListener("beforeunload", () => {
-    const circles = document.querySelectorAll(".circle");
-    circles.forEach((circle) => circle.remove());
-  });
-
-  let lastTime = 0;
-  function animate(time) {
-    if (time - lastTime > 200) {
-      lines();
-      lastTime = time;
-    }
-    requestAnimationFrame(animate);
-  }
-
-  requestAnimationFrame(animate);
-</script>
+<!-- 
+<script>
+  // Supports weights 100-900
+  // import '@fontsource-variable/jetbrains-mono';
+</script> -->
